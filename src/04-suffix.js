@@ -9,8 +9,10 @@
 	if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
 		module.exports = calista;
 	}
-	else {
-		window.calista = calista;
-	}
+
+    // export for browser
+    if (typeof window !== 'undefined') {
+        window.calista = calista;
+    }
 
 })(this, this.infuse, this.signals);
